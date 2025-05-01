@@ -1,0 +1,60 @@
+﻿@{
+	Layout = "_PortalLayout";
+	ViewData["Title"] = "Projects";
+}
+
+@{
+    var projects = projectService.GetProjects();
+    var startedProjects = projects.Where(p => p.Status == "Started").Count();
+    var completedProjects = projects.Where(p => p.Status == "Completed").Count();
+}
+
+
+<div class="projects-header mb-4">
+    <div class="d-flex justify-content-end mb-4">
+        <a asp-controller="Projects" asp-action="Create" class="btn btn-accent d-flex align-items-center gap-2 px-4 py-2 shadow-sm">
+            <img src="~/images/Icons/Plus Icon.svg" alt="Add" width="20" height="20" />
+            Add Project
+        </a>
+    </div>
+    </div>
+
+    <h2 class="projects-title">Projects</h2>
+
+    <nav class="projects-tabs">
+        <a asp-action="Index" asp-route-status="All"
+           class="tab @(ViewData["CurrentStatus"]?.ToString() == "All" ? "active btn-accent" : "")">
+            ALL [@projects.Count]
+        </a>
+        <a asp-action="Index" asp-route-status="Started"
+           class="tab @(ViewData["CurrentStatus"]?.ToString() == "Started" ? "active btn-accent" : "")">
+            STARTED [@startedProjects]
+        </a>
+        <a asp-action="Index" asp-route-status="Completed"
+           class="tab @(ViewData["CurrentStatus"]?.ToString() == "Completed" ? "active btn-accent" : "")">
+            COMPLETED [@completedProjects]
+        </a>
+    </nav>
+    <div class="project-cards">
+        @foreach (var project in projects)
+        {
+            <div class="project-card">
+                <div class="project-card-header">
+                    <img src="@project.IconPath" alt="Icon" />
+                    <div>
+                        <p class="project-title">@project.Title</p>
+                        <p class="project-company">@project.Company</p>
+                    </div>
+                </div>
+                <p class="project-description">@project.Description</p>
+
+                <div class="d-flex justify-content-end mt-3">
+                    <a asp-action="Edit" asp-route-id="@project.Id" class="btn btn-sm btn-outline-primary">
+                        Edit
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+
+

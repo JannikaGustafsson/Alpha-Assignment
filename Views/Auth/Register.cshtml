@@ -1,0 +1,71 @@
+﻿@model RegisterViewModel
+@{
+    Layout = "_StandardLayout";
+    ViewData["Title"] = "Create Account";
+}
+<!-- Built partially with help from ChatGPT to follow correct Bootstrap 5 syntax and layout -->
+@if (TempData.ContainsKey("RegisterSuccess"))
+{
+    <div class="alert alert-success">
+        @TempData["RegisterSuccess"]
+    </div>
+}
+
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4" style="width: 100%; max-width: 500px;">
+        <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+
+        <form asp-controller="Auth" asp-action="Register" method="post" novalidate>
+            <div>
+                <div class="mb-4">
+                    <label asp-for="FormData.FirstName" class="form-label"></label>
+                    <input asp-for="FormData.FirstName" class="form-control" />
+                    <span asp-validation-for="FormData.FirstName" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="FormData.LastName" class="form-label"></label>
+                    <input asp-for="FormData.LastName" class="form-control" />
+                    <span asp-validation-for="FormData.LastName" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="FormData.Email" class="form-label"></label>
+                <input asp-for="FormData.Email" class="form-control" />
+                <span asp-validation-for="FormData.Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="FormData.Password" class="form-label"></label>
+                <input asp-for="FormData.Password" class="form-control" value="@Model?.FormData?.Password" />
+                <span asp-validation-for="FormData.Password" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="FormData.ConfirmPassword" class="form-label"></label>
+                <input asp-for="FormData.ConfirmPassword" class="form-control" value="@Model?.FormData?.ConfirmPassword" />
+                <span asp-validation-for="FormData.ConfirmPassword" class="text-danger small"></span>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="checkbox" name="iAccept" id="iAccept" class="form-check-input" />
+                <label for="iAccept" class="form-check-label">
+                    I accept
+                    <a href="/terms" class="link-primary text-decoration-none">Terms and Conditions</a>
+                </label>
+            </div>
+
+            <div class="d-grid mb-5">
+                <button type="submit" class="btn btn-accent">Create Account</button>
+            </div>
+        </form>
+
+        <p class="no-account">
+            Already have an account?
+            <a href="/login" class="link-primary text-decoration-none">Log In</a>
+        </p>
+    </div>
+</div>
+

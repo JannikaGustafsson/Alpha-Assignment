@@ -1,0 +1,14 @@
+﻿namespace WebApp.Entities;
+
+public class Project
+{
+    public int Id { get; set; }
+    public required string Name { get; set; }
+    public string? Description { get; set; }
+    public required string Customer { get; set; }
+    public string Status { get; set; } = "Started";
+    public DateTime? StartDate { get; set; }
+    public DateTime? EndDate { get; set; }
+    public decimal? Budget { get; set; }
+
+}

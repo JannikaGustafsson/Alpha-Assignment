@@ -1,0 +1,117 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\A Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\A Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Alpha Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Alpha Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Gear Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Gear Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Logout Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Logout Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Man Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\NotificationBell Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\NotificationBell Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Plus Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Plus Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Projects Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Projects Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\favicon.svg",
+      "PackagePath": "staticwebassets\\Images\\favicon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\css\\form.css",
+      "PackagePath": "staticwebassets\\css\\form.css"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\js\\validate.js",
+      "PackagePath": "staticwebassets\\js\\validate.js"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\0d006a80-287f-465f-844d-594d5b6f4eae_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\0d006a80-287f-465f-844d-594d5b6f4eae_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\46936af2-fe2c-4d9b-8f3a-d7b69558bf04_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\46936af2-fe2c-4d9b-8f3a-d7b69558bf04_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\73a6f2b2-3bb7-44e1-8f82-61bda936f70b_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\73a6f2b2-3bb7-44e1-8f82-61bda936f70b_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\9b7bc13d-f227-49ef-a7cc-bd42137bce3b_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\9b7bc13d-f227-49ef-a7cc-bd42137bce3b_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\a8c1a6f7-63af-43f1-9162-c46e59b71596_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\a8c1a6f7-63af-43f1-9162-c46e59b71596_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\c5a7e1fa-449c-4fd1-962c-9e42a4f23e69_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\c5a7e1fa-449c-4fd1-962c-9e42a4f23e69_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\cc8d4796-595f-457a-a7f1-13b79def20ef_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\cc8d4796-595f-457a-a7f1-13b79def20ef_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\dfb1bd69-cdef-4454-a64c-5f6beb9cc315_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\dfb1bd69-cdef-4454-a64c-5f6beb9cc315_Man Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\e21f7d2b-2148-40c6-a2ab-34275662c772_Man Icon.svg",
+      "PackagePath": "staticwebassets\\uploads\\e21f7d2b-2148-40c6-a2ab-34275662c772_Man Icon.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.WebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.WebApp.props",
+      "PackagePath": "build\\WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApp.props",
+      "PackagePath": "buildMultiTargeting\\WebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.WebApp.props",
+      "PackagePath": "buildTransitive\\WebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,126 @@
+﻿@model WebApp.Models.ProjectCreateFormModel
+
+@{
+    Layout = "_PortalLayout";
+}
+
+@* This code was developed with assistance from ChatGPT *@
+@{
+    ViewData["Title"] = "Add Project";
+}
+<div class="add-project-container">
+    <div class="project-card-form">
+        <button class="close-btn" onclick="location.href='@Url.Action("Index", "Projects")'">×</button>
+        <h2>Add Project</h2>
+        <div class="logo-wrapper">
+
+        <img src="~/images/Icons/A Icon.svg" class="form-logo" alt="Logo" />
+        </div>       
+
+        
+        <form asp-action="Create" method="post" novalidate>
+            <div class="form-group">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Customer" class="form-label"></label>
+                <input asp-for="Customer" class="form-control" />
+                <span asp-validation-for="Customer" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="form-label"></label>
+
+                <div id="description-editor-wrapper">
+                    <div id="description-editor-toolbar" class="quill-toolbar mb-0">
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-align" value=""></button>
+                            <button class="ql-align" value="center"></button>
+                            <button class="ql-align" value="right"></button>
+                            <button class="ql-align" value="justify"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-list" value="ordered"></button>
+                            <button class="ql-list" value="bullet"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-link"></button>
+                        </span>
+                    </div>
+                    <div id="description-editor" style="height: 200px;"></div>
+                </div>
+
+                <input type="hidden" id="Description" name="Description" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group d-flex gap-3">
+                <div class="w-50">
+                    <label asp-for="StartDate" class="form-label">Start Date</label>
+                    <input asp-for="StartDate" class="form-control" type="date" />
+                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                </div>
+
+                <div class="w-50">
+                    <label asp-for="EndDate" class="form-label">End Date</label>
+                    <input asp-for="EndDate" class="form-control" type="date" />
+                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group position-relative">
+                <label for="Budget" class="form-label">Budget</label>
+                <div class="budget-input-wrapper">
+                    <span class="budget-symbol">$</span>
+                    <input asp-for="Budget" type="number" class="form-control budget-input" />
+
+
+                </div>                
+                <span asp-validation-for="Budget" class="text-danger"></span>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <label asp-for="Status" class="form-label"></label>
+                <select asp-for="Status" class="form-control">
+                    <option value="Started">Started</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="button-group mt-3">
+                <button type="submit" class="btn-accent">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        const quill = new Quill('#description-editor', {
+            theme: 'snow',
+            placeholder: 'Type something',
+            modules: {
+                toolbar: '#description-editor-toolbar'
+            }
+        });
+
+        document.querySelector('form').addEventListener('submit', function () {
+            document.querySelector('#Description').value = quill.root.innerHTML;
+        });
+    </script>
+}
+
+

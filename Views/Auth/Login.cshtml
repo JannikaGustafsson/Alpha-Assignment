@@ -1,0 +1,49 @@
+﻿@model LogInModel
+@{
+    Layout = "_StandardLayout";
+    ViewData["Title"] = "Login";
+}
+
+<!-- Built partially with help from ChatGPT to follow correct Bootstrap 5 syntax and layout -->
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+
+        <form asp-controller="Auth" asp-action="Login" method="post" novalidate>
+            <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />
+            <div class="mb-4">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" value="@Model.Password" />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+
+            <div class="form-check mb-4">
+                <input type="checkbox" name="rememberMe" id="rememberMe" class="form-check-input" />
+                <label for="rememberMe" class="form-check-label">Remember Me</label>
+            </div>
+
+            <div class="d-grid mb-5">
+                <button type="submit" class="btn btn-accent">Log In</button>
+            </div>
+        </form>
+
+        <p class="no-account">
+            Don't have an account?
+            <a href="/register" class="link-primary text-decoration-none">Sign Up</a>
+        </p>
+    </div>
+</div>
+
+
+	
+
+
+
+
