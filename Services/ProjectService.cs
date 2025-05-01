@@ -20,6 +20,7 @@ public class ProjectService(ApplicationDbContext context)
 
         return projects.Select(p => new ProjectCardViewModel
         {
+            Id = p.Id,
             Title = p.Name,
             Company = p.Customer ?? "",
             Description = p.Description ?? "",

@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-@import url("login.css");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 
 :root {
     --font-standard: "Nunito", sans-serif;
@@ -117,8 +118,12 @@ wrapper {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .5rem;    
 }
+
+    .logo-container h1 {
+        font-size: 2rem;   
+    }
 
 .icon-background {
     width: 32px;
@@ -254,7 +259,7 @@ wrapper {
         background-color: rgba(26, 143, 255, 0.2);
     }
 
-/* Card grid container */
+/* Card container */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -299,16 +304,11 @@ wrapper {
     color: #6b7280;
 }
 
-
 .project-description {
     font-size: 0.95rem;
     color: #4b5563;
 }
 
-
-
-
-/* Dark Mode */
 [data-theme="dark"] .project-container {
     background-color: rgba(45, 153, 255, 0.2);
 }
@@ -371,7 +371,7 @@ wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 5rem;
     min-height: 100vh;
 }
 
@@ -415,8 +415,6 @@ wrapper {
 .mt-3 {
     margin-top: 5rem;
 }
-
-
 
 .project-card-form input,
 .project-card-form textarea,
@@ -465,7 +463,6 @@ button.close-btn {
     margin-bottom: 2rem;
 }
 
-
 #description-editor-toolbar {
     border-bottom: 1px solid #ced4da;
     background-color: #fff;
@@ -502,6 +499,60 @@ button.close-btn {
     border-radius: 0.75rem;
     font-size: 1rem;
 }
+
+.project-card {
+    width: 280px;
+    border-radius: 16px;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+    .project-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+.project-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.project-title {
+    font-size: 16px;
+}
+
+.project-company {
+    font-size: 14px;
+}
+
+.project-description {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5px);
+    transition: all 0.2s ease;
+}
+    .dropdown-menu-custom.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+
+
 
 
 

@@ -9,15 +9,18 @@ C:\Projects\ASPNET\WebApp\wwwroot\uploads\73a6f2b2-3bb7-44e1-8f82-61bda936f70b_M
 C:\Projects\ASPNET\WebApp\wwwroot\css\site.css
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Projects Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Plus Icon.svg
+C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Edit Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\c5a7e1fa-449c-4fd1-962c-9e42a4f23e69_Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\9b7bc13d-f227-49ef-a7cc-bd42137bce3b_Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\dfb1bd69-cdef-4454-a64c-5f6beb9cc315_Man Icon.svg
+C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Dots Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\js\validate.js
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\cc8d4796-595f-457a-a7f1-13b79def20ef_Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Logout Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\46936af2-fe2c-4d9b-8f3a-d7b69558bf04_Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\A Icon.svg
+C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\Bin Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\favicon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\uploads\e21f7d2b-2148-40c6-a2ab-34275662c772_Man Icon.svg
 C:\Projects\ASPNET\WebApp\wwwroot\Images\Icons\NotificationBell Icon.svg
@@ -26,6 +29,9 @@ wwwroot\css\site.css
 wwwroot\Images\favicon.svg
 wwwroot\Images\Icons\A Icon.svg
 wwwroot\Images\Icons\Alpha Icon.svg
+wwwroot\Images\Icons\Bin Icon.svg
+wwwroot\Images\Icons\Dots Icon.svg
+wwwroot\Images\Icons\Edit Icon.svg
 wwwroot\Images\Icons\Gear Icon.svg
 wwwroot\Images\Icons\Logout Icon.svg
 wwwroot\Images\Icons\Man Icon.svg

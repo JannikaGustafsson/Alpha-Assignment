@@ -1,6 +1,19 @@
 ﻿@{
-	Layout = "_PortalLayout";
-	ViewData["Title"] = "Projects";
+    Layout = "_PortalLayout";
+    ViewData["Title"] = "Projects";
+}
+
+@functions {
+    public static string StripParagraphTags(string html)
+    {
+        if (string.IsNullOrEmpty(html)) return string.Empty;
+
+        return html
+            .Replace("<p>", "")
+            .Replace("</p>", "")
+            .Replace("<p ", "<p")
+            .Trim();
+    }
 }
 
 @{
@@ -9,7 +22,6 @@
     var completedProjects = projects.Where(p => p.Status == "Completed").Count();
 }
 
-
 <div class="projects-header mb-4">
     <div class="d-flex justify-content-end mb-4">
         <a asp-controller="Projects" asp-action="Create" class="btn btn-accent d-flex align-items-center gap-2 px-4 py-2 shadow-sm">
@@ -17,44 +29,89 @@
             Add Project
         </a>
     </div>
-    </div>
+</div>
 
-    <h2 class="projects-title">Projects</h2>
+<h2 class="projects-title">Projects</h2>
 
-    <nav class="projects-tabs">
-        <a asp-action="Index" asp-route-status="All"
-           class="tab @(ViewData["CurrentStatus"]?.ToString() == "All" ? "active btn-accent" : "")">
-            ALL [@projects.Count]
-        </a>
-        <a asp-action="Index" asp-route-status="Started"
-           class="tab @(ViewData["CurrentStatus"]?.ToString() == "Started" ? "active btn-accent" : "")">
-            STARTED [@startedProjects]
-        </a>
-        <a asp-action="Index" asp-route-status="Completed"
-           class="tab @(ViewData["CurrentStatus"]?.ToString() == "Completed" ? "active btn-accent" : "")">
-            COMPLETED [@completedProjects]
-        </a>
-    </nav>
-    <div class="project-cards">
-        @foreach (var project in projects)
-        {
-            <div class="project-card">
-                <div class="project-card-header">
-                    <img src="@project.IconPath" alt="Icon" />
+<nav class="projects-tabs mb-4">
+    <a asp-action="Index" asp-route-status="All"
+       class="tab @(ViewData["CurrentStatus"]?.ToString() == "All" ? "active btn-accent" : "")">
+        ALL [@projects.Count]
+    </a>
+    <a asp-action="Index" asp-route-status="Started"
+       class="tab @(ViewData["CurrentStatus"]?.ToString() == "Started" ? "active btn-accent" : "")">
+        STARTED [@startedProjects]
+    </a>
+    <a asp-action="Index" asp-route-status="Completed"
+       class="tab @(ViewData["CurrentStatus"]?.ToString() == "Completed" ? "active btn-accent" : "")">
+        COMPLETED [@completedProjects]
+    </a>
+</nav>
+
+<div class="project-cards d-flex flex-wrap gap-4">
+    @foreach (var project in projects)
+    {
+        <div class="project-card bg-white shadow-sm rounded-4 p-3"
+             style="width: 350px; height: 276px; position: relative;">
+
+            <div class="d-flex justify-content-between align-items-start">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="@project.IconPath" alt="Icon" class="project-icon" style="width: 36px; height: 36px;" />
                     <div>
-                        <p class="project-title">@project.Title</p>
-                        <p class="project-company">@project.Company</p>
+                        <div class="project-title fw-semibold mb-0">@project.Title</div>
+                        <div class="project-company text-muted small mb-0">@project.Company</div>
                     </div>
                 </div>
-                <p class="project-description">@project.Description</p>
 
-                <div class="d-flex justify-content-end mt-3">
-                    <a asp-action="Edit" asp-route-id="@project.Id" class="btn btn-sm btn-outline-primary">
-                        Edit
-                    </a>
+                <div class="position-relative">
+                    <button class="btn btn-link p-0 dropdown-toggle-icon" type="button" onclick="toggleDropdown(this)">
+                        <img src="~/images/Icons/Dots Icon.svg" alt="Options" width="20" height="20" />
+                    </button>
+
+                    <div class="dropdown-menu-custom shadow rounded-3 p-2">
+                        <a asp-controller="Projects" asp-action="Edit" asp-route-id="@project.Id" class="dropdown-item d-flex align-items-center gap-2">
+                            <img src="~/images/Icons/Edit Icon.svg" alt="Edit" width="16" height="16" />
+                            Edit
+                        </a>
+
+                        <form asp-controller="Projects" asp-action="Delete" asp-route-id="@project.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this project?');">
+                            <button type="submit" class="dropdown-item d-flex align-items-center gap-2 text-danger bg-transparent border-0 w-100 text-start">
+                                <img src="~/images/Icons/Bin Icon.svg" alt="Delete" width="16" height="16" />
+                                Delete Project
+                            </button>
+                        </form>
+
+                    </div>
                 </div>
             </div>
+
+            <div class="project-description text-muted small mt-3">
+                @Html.Raw(StripParagraphTags(project.Description))
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function toggleDropdown(button) {
+            const dropdown = button.nextElementSibling;
+            const allDropdowns = document.querySelectorAll('.dropdown-menu-custom');
+
+            allDropdowns.forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('show');
+                }
+            });
+
+            dropdown.classList.toggle('show');
         }
-    </div>
 
-
+        document.addEventListener('click', function (e) {
+            const isToggle = e.target.closest('.dropdown-toggle-icon');
+            if (!isToggle) {
+                document.querySelectorAll('.dropdown-menu-custom').forEach(menu => menu.classList.remove('show'));
+            }
+        });
+    </script>
+}

@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\Images\\Icons\\Alpha Icon.svg"
     },
     {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Bin Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Bin Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Dots Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Dots Icon.svg"
+    },
+    {
+      "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Edit Icon.svg",
+      "PackagePath": "staticwebassets\\Images\\Icons\\Edit Icon.svg"
+    },
+    {
       "Id": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\Images\\Icons\\Gear Icon.svg",
       "PackagePath": "staticwebassets\\Images\\Icons\\Gear Icon.svg"
     },

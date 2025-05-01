@@ -21,66 +21,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
-    <!-- Styles -->
     <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
-
 
     <style>
-        #theme-toggle i {
-            font-size: 22px;
-            color: #6B7280;
-        }
-
         body {
             transition: background-color 0.3s ease, color 0.3s ease;
         }
     </style>
 </head>
-<!--Denna delen är byggd med hjälp av ChatGPT för att korrekt använda Bootstraps syntax och klasser-->
 <body id="theme-body" data-theme="light">
     <div class="container mt-4">
-        <div class="container mt-4 d-flex justify-content-end">
-            <button id="theme-toggle" onclick="toggleTheme()" class="btn border-0 bg-transparent">
-                <i id="theme-icon" class="fas fa-moon"></i>
-            </button>
-        </div>
-
         @RenderBody()
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-    <!--Built with ChatGPT-->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedTheme = localStorage.getItem("theme");
-            const body = document.getElementById("theme-body");
-            const icon = document.getElementById("theme-icon");
-
-            if (savedTheme) {
-                body.setAttribute("data-theme", savedTheme);
-                icon.classList.remove("fa-moon", "fa-sun");
-                icon.classList.add(savedTheme === "dark" ? "fa-sun" : "fa-moon");
-            }
-        });
-
-        function toggleTheme() {
-            const body = document.getElementById("theme-body");
-            const icon = document.getElementById("theme-icon");
-            const currentTheme = body.getAttribute("data-theme");
-            const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-            body.setAttribute("data-theme", newTheme);
-            localStorage.setItem("theme", newTheme);
-
-            icon.classList.remove("fa-moon", "fa-sun");
-            icon.classList.add(newTheme === "dark" ? "fa-sun" : "fa-moon");
-        }
-    </script>
 </body>
 </html>
-

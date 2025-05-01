@@ -191,4 +191,8 @@ C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\onyfow5aua-rm1tufx9pi.gz
 C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\3bq3bxsmkz-0iakhhjmiq.gz
 C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\nzymtqkpc3-lplmag0ouy.gz
 C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\z5nhc1ercb-oy4rwtmrvs.gz
-C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\fspdjdrw69-0rlalskw56.gz
+C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\WebApp.sourcelink.json
+C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\mp9ot3vdpn-aflzpya039.gz
+C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\x0a8wbut5g-50tfm56k4k.gz
+C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\lhf4zk3z8u-sfb706z9mh.gz
+C:\Projects\ASPNET\WebApp\obj\Debug\net9.0\compressed\fspdjdrw69-pqu0es52w4.gz

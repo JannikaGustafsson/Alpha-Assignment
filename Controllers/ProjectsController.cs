@@ -24,7 +24,7 @@ namespace WebApp.Controllers
                 projects = projects.Where(p => p.Status == status).ToList();
             }
 
-            return View(projects);
+            return RedirectToAction("Index", "Home", new { status });
         }
 
         [HttpGet]
@@ -49,7 +49,8 @@ namespace WebApp.Controllers
                 _context.Projects.Add(project);
                 _context.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
+
             }
 
             return View(model);
@@ -95,16 +96,24 @@ namespace WebApp.Controllers
                 project.Budget = model.Budget;
 
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
 
             return View(model);
         }
 
 
-        public IActionResult Details()
+        [HttpPost]
+        public IActionResult Delete(int id)
         {
-            return View();
+            var project = _context.Projects.FirstOrDefault(p => p.Id == id);
+            if (project == null)
+                return NotFound();
+
+            _context.Projects.Remove(project);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
