@@ -1,0 +1,33 @@
+## Visual Studio
+.vs/
+*.user
+*.suo
+
+## Build output
+bin/
+obj/
+*.log
+
+## Rider/JetBrains
+.idea/
+
+## NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.cache
+*.config
+
+## Others
+*.db
+*.sqlite
+*.db-shm
+*.db-wal
+
+## AppSettings – valfritt men bra för säkerhet
+appsettings.*.json
+
+## OS-filer
+.DS_Store
+Thumbs.db
