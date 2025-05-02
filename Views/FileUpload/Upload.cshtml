@@ -14,7 +14,6 @@
 			<button type="submit" class="btn-accent w-100 rounded">Refresh</button>
 		</form>
 	</div>
-
 }
 else
 {
@@ -28,9 +27,7 @@ else
 					<i class="fa-solid fa-camera"></i>
 				</div>
 				<img id="image-preview" src="#" alt="Image Preview" class="d-none" />
-			</div>
-
-			
+			</div>			
 
 			<div class="form-group mb-3">
 				<label asp-for="File" class="form-label"></label>
@@ -60,13 +57,13 @@ else
 				reader.onload = (e) => {
 					img.src = e.target.result;
 					img.classList.remove("d-none");
-					cameraIcon.classList.add("d-none"); // Dölj kameran
+					cameraIcon.classList.add("d-none");
 				};
 
 				reader.readAsDataURL(file);
 			} else {
 				img.classList.add("d-none");
-				cameraIcon.classList.remove("d-none"); // Visa kameran igen
+				cameraIcon.classList.remove("d-none");
 			}
 		});
 	});

@@ -1,16 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using WebApp.Services;
+using WebApp.Models;
 
 namespace WebApp.Controllers;
 
 [Authorize]
-public class HomeController : Controller
+public class HomeController(ProjectService projectService) : Controller
 {
-    public IActionResult Index()
-    {      
+    private readonly ProjectService _projectService = projectService;
 
-        ViewData["Title"] = "Home";        
+    public IActionResult Index(string status = "All")
+    {
+        ViewData["Title"] = "Home";
+        ViewData["CurrentStatus"] = status;
 
-        return View();
+        var projects = _projectService.GetProjects();
+
+        if (status != "All")
+        {
+            projects = projects.Where(p => p.Status == status).ToList();
+        }
+
+        return View(projects);
     }
 }
+

@@ -2,6 +2,7 @@
 
 public class Project
 {
+    public string? IconPath { get; set; } = "/images/icons/A Icon.svg";
     public int Id { get; set; }
     public required string Name { get; set; }
     public string? Description { get; set; }

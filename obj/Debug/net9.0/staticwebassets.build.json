@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AE/PcB4ipmBpeMnfXE3KrQ3zBdIio8PT0h8+v9c0n+g=",
+  "Hash": "W/QPJKrGm5Re3do9w0lEvCt6DUO7Bp1hqWgiHApBgvM=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\uploads\\73a6f2b2-3bb7-44e1-8f82-61bda936f70b_Man Icon.svg"
     },
     {
-      "Identity": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-pqu0es52w4.gz",
+      "Identity": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-yi0fmv0fre.gz",
       "SourceId": "WebApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/WebApp",
-      "RelativePath": "css/site#[.{fingerprint=pqu0es52w4}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=yi0fmv0fre}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +199,8 @@
       "RelatedAsset": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5e4bio3h11",
-      "Integrity": "/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA=",
+      "Fingerprint": "96whfd8o5x",
+      "Integrity": "IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\css\\site.css"
@@ -598,8 +598,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pqu0es52w4",
-      "Integrity": "oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU=",
+      "Fingerprint": "yi0fmv0fre",
+      "Integrity": "aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1410,12 +1410,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-pqu0es52w4.gz",
+      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-yi0fmv0fre.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000385059684"
+          "Quality": "0.000366032211"
         }
       ],
       "ResponseHeaders": [
@@ -1425,15 +1425,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2596"
+          "Value": "2731"
         },
         {
           "Name": "ETag",
-          "Value": "\"/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA=\""
+          "Value": "\"IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1453,13 +1453,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU=\""
+          "Value": "W/\"aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU="
+          "Value": "sha256-aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4="
         }
       ]
     },
@@ -1474,7 +1474,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11604"
+          "Value": "12245"
         },
         {
           "Name": "Content-Type",
@@ -1482,11 +1482,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU=\""
+          "Value": "\"aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1496,13 +1496,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU="
+          "Value": "sha256-aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-pqu0es52w4.gz",
+      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-yi0fmv0fre.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1511,7 +1511,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2596"
+          "Value": "2731"
         },
         {
           "Name": "Content-Type",
@@ -1519,11 +1519,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA=\""
+          "Value": "\"IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1541,18 +1541,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA="
+          "Value": "sha256-IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE="
         }
       ]
     },
     {
-      "Route": "css/site.pqu0es52w4.css",
-      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-pqu0es52w4.gz",
+      "Route": "css/site.yi0fmv0fre.css",
+      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-yi0fmv0fre.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000385059684"
+          "Quality": "0.000366032211"
         }
       ],
       "ResponseHeaders": [
@@ -1562,15 +1562,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2596"
+          "Value": "2731"
         },
         {
           "Name": "ETag",
-          "Value": "\"/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA=\""
+          "Value": "\"IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1590,13 +1590,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU=\""
+          "Value": "W/\"aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pqu0es52w4"
+          "Value": "yi0fmv0fre"
         },
         {
           "Name": "label",
@@ -1604,12 +1604,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU="
+          "Value": "sha256-aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4="
         }
       ]
     },
     {
-      "Route": "css/site.pqu0es52w4.css",
+      "Route": "css/site.yi0fmv0fre.css",
       "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1619,7 +1619,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11604"
+          "Value": "12245"
         },
         {
           "Name": "Content-Type",
@@ -1627,11 +1627,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU=\""
+          "Value": "\"aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1641,7 +1641,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pqu0es52w4"
+          "Value": "yi0fmv0fre"
         },
         {
           "Name": "label",
@@ -1649,13 +1649,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-oSlZ1WI895I1S+dfZD3Z2V9Xa1Ffd2UJrFTK5jaldgU="
+          "Value": "sha256-aiKR4C3bAAs/P6MzD2+8wXbuCIahInlIbjB8JLnxDi4="
         }
       ]
     },
     {
-      "Route": "css/site.pqu0es52w4.css.gz",
-      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-pqu0es52w4.gz",
+      "Route": "css/site.yi0fmv0fre.css.gz",
+      "AssetFile": "C:\\Projects\\ASPNET\\WebApp\\obj\\Debug\\net9.0\\compressed\\fspdjdrw69-yi0fmv0fre.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1664,7 +1664,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2596"
+          "Value": "2731"
         },
         {
           "Name": "Content-Type",
@@ -1672,11 +1672,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA=\""
+          "Value": "\"IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 01 May 2025 18:48:23 GMT"
+          "Value": "Fri, 02 May 2025 15:13:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1694,7 +1694,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pqu0es52w4"
+          "Value": "yi0fmv0fre"
         },
         {
           "Name": "label",
@@ -1702,7 +1702,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/QypqCJ0/mAlwpyXi7YC+JFNYoRofMKHyZH5X6iMhGA="
+          "Value": "sha256-IQB/19v0tKot0GwhJwugwN1eaNmgTc4ONmUcanjhOOE="
         }
       ]
     },

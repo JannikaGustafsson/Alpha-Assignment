@@ -1,32 +1,29 @@
 ﻿@model WebApp.Models.ProjectCreateFormModel
 
-@{
-    Layout = "_PortalLayout";
-}
-
 @* This code was developed with assistance from ChatGPT *@
 @{
+    Layout = "_PortalLayout";
     ViewData["Title"] = "Edit Project";
 }
+
 <div class="add-project-container">
     <div class="project-card-form">
         <button class="close-btn" onclick="location.href='@Url.Action("Index", "Projects")'">×</button>
         <h2>Edit Project</h2>
         <div class="logo-wrapper">
-
-            <img src="~/images/Icons/A Icon.svg" class="form-logo" alt="Logo" />
         </div>
 
-
-        <form asp-action="Edit" method="post" novalidate>
+        <form asp-action="Edit" method="post" enctype="multipart/form-data" novalidate>
             <input type="hidden" asp-for="Id" />
+
+            <partial name="_ImageUpload" model="Model" />
+
+
             <div class="form-group">
                 <label asp-for="Name" class="form-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            
-
 
             <div class="form-group">
                 <label asp-for="Customer" class="form-label"></label>
@@ -109,7 +106,9 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+
     <script>
+        // Initiera Quill-editorn
         const quill = new Quill('#description-editor', {
             theme: 'snow',
             placeholder: 'Type something',
@@ -118,10 +117,46 @@
             }
         });
 
+        // Sätt befintlig text i edit-läge
+        document.addEventListener("DOMContentLoaded", () => {
+            const existingHtml = `@Html.Raw(Model.Description?.Replace("`", "\\`"))`;
+            quill.root.innerHTML = existingHtml;
+
+            const fileInput = document.querySelector("#File");
+            const img = document.querySelector("#image-preview");
+            const cameraIcon = document.querySelector("#camera-icon");
+
+            if (!fileInput || !img || !cameraIcon) return;
+
+            if (img.getAttribute("src") !== "#" && img.getAttribute("src") !== "") {
+                img.classList.remove("d-none");
+                cameraIcon.style.display = "none";
+            }
+
+            fileInput.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        img.src = e.target.result;
+                        img.classList.remove("d-none");
+                        cameraIcon.style.display = "none";
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    img.classList.add("d-none");
+                    cameraIcon.style.display = "block";
+                }
+            });
+        });
+
+        // Spara Quill-text på form submit
         document.querySelector('form').addEventListener('submit', function () {
             document.querySelector('#Description').value = quill.root.innerHTML;
         });
     </script>
 }
+
+
 
 

@@ -6,6 +6,13 @@ namespace WebApp.Models;
 
 public class ProjectCreateFormModel
 {
+
+
+    [Display(Name = "File upload")]
+    [Required(ErrorMessage = "Please select a file to upload.")]
+    public IFormFile File { get; set; } = null!;
+
+    public string? ExistingIconPath { get; set; }
     public int Id { get; set; }
 
     [Display(Name = "Project Name", Prompt = "Please enter project name")]

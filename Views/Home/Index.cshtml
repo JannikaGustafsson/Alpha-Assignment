@@ -1,6 +1,11 @@
-﻿@{
+﻿@model List<WebApp.Models.ProjectCardViewModel>
+
+@{
     Layout = "_PortalLayout";
     ViewData["Title"] = "Projects";
+
+    var startedProjects = Model.Count(p => p.Status == "Started");
+    var completedProjects = Model.Count(p => p.Status == "Completed");
 }
 
 @functions {
@@ -16,11 +21,6 @@
     }
 }
 
-@{
-    var projects = projectService.GetProjects();
-    var startedProjects = projects.Where(p => p.Status == "Started").Count();
-    var completedProjects = projects.Where(p => p.Status == "Completed").Count();
-}
 
 <div class="projects-header mb-4">
     <div class="d-flex justify-content-end mb-4">
@@ -34,22 +34,14 @@
 <h2 class="projects-title">Projects</h2>
 
 <nav class="projects-tabs mb-4">
-    <a asp-action="Index" asp-route-status="All"
-       class="tab @(ViewData["CurrentStatus"]?.ToString() == "All" ? "active btn-accent" : "")">
-        ALL [@projects.Count]
-    </a>
-    <a asp-action="Index" asp-route-status="Started"
-       class="tab @(ViewData["CurrentStatus"]?.ToString() == "Started" ? "active btn-accent" : "")">
-        STARTED [@startedProjects]
-    </a>
-    <a asp-action="Index" asp-route-status="Completed"
-       class="tab @(ViewData["CurrentStatus"]?.ToString() == "Completed" ? "active btn-accent" : "")">
-        COMPLETED [@completedProjects]
-    </a>
+    <a asp-action="Index" asp-route-status="All" class="tab @(ViewData["CurrentStatus"]?.ToString() == "All" ? "active" : "")">ALL [@Model.Count]</a>
+    <a asp-action="Index" asp-route-status="Started" class="tab @(ViewData["CurrentStatus"]?.ToString() == "Started" ? "active" : "")">STARTED [@startedProjects]</a>
+    <a asp-action="Index" asp-route-status="Completed" class="tab @(ViewData["CurrentStatus"]?.ToString() == "Completed" ? "active" : "")">COMPLETED [@completedProjects]</a>
 </nav>
 
+
 <div class="project-cards d-flex flex-wrap gap-4">
-    @foreach (var project in projects)
+    @foreach (var project in Model)
     {
         <div class="project-card bg-white shadow-sm rounded-4 p-3"
              style="width: 350px; height: 276px; position: relative;">

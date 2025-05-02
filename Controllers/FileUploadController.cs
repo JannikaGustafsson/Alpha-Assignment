@@ -2,42 +2,39 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApp.Models;
 
-namespace WebApp.Controllers;
-
-public class FileUploadController(IWebHostEnvironment env) : Controller
+namespace WebApp.Controllers
 {
-    private readonly IWebHostEnvironment _env = env;
-
-    [HttpGet]
-    public IActionResult Upload()
+    public class FileUploadController(IWebHostEnvironment env) : Controller
     {
-        return View();
-    }
+        private readonly IWebHostEnvironment _env = env;
 
-    [HttpPost]
-    public async Task<IActionResult> Upload(FileUploadViewModel model)
-    {
-        if (!ModelState.IsValid || model.File == null || model.File.Length == 0)
+        [HttpGet]
+        public IActionResult Upload()
         {
-            ModelState.AddModelError("File", "Please select a file to upload.");
-            return View(model);
+            return View();
         }
 
-        var uploadFolder = Path.Combine(_env.WebRootPath, "uploads");
-
-        Directory.CreateDirectory(uploadFolder);
-
-        var filePath = Path.Combine(uploadFolder, $"{Guid.NewGuid()}_{ Path.GetFileName(model.File.FileName)}");
-
-        using (var stream = new FileStream(filePath, FileMode.Create))
+        [HttpPost]
+        public async Task<IActionResult> Upload(FileUploadViewModel model)
         {
-            await model.File.CopyToAsync(stream);
+            if (!ModelState.IsValid || model.File == null || model.File.Length == 0)
+            {
+                ModelState.AddModelError("File", "Please select a file to upload.");
+                return View(model);
+            }
+
+            var uploadFolder = Path.Combine(_env.WebRootPath, "uploads");
+            Directory.CreateDirectory(uploadFolder);
+
+            var filePath = Path.Combine(uploadFolder, $"{Guid.NewGuid()}_{Path.GetFileName(model.File.FileName)}");
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await model.File.CopyToAsync(stream);
+            }
+
+            ViewBag.Message = "File was uploaded successfully.";
+            return View();
         }
-
-        ViewBag.Message = "File was uploaded successully.";
-  
-
-        return View();
     }
 }
-
