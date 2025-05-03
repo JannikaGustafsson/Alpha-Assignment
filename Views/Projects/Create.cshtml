@@ -1,11 +1,10 @@
 ﻿@model WebApp.Models.ProjectCreateFormModel
 
+
+<!-- Built partially with help from ChatGPT to follow correct Bootstrap 5 syntax and layout -->
+
 @{
     Layout = "_PortalLayout";
-}
-
-@* This code was developed with assistance from ChatGPT *@
-@{
     ViewData["Title"] = "Add Project";
 }
 <div class="add-project-container">
@@ -20,8 +19,6 @@
         <form asp-action="Create" method="post" enctype="multipart/form-data" novalidate>
 
             <partial name="_ImageUpload" model="Model" />
-
-
 
             <div class="form-group">
                 <label asp-for="Name" class="form-label"></label>
@@ -119,6 +116,36 @@
         document.querySelector('form').addEventListener('submit', function () {
             document.querySelector('#Description').value = quill.root.innerHTML;
         });
+
+                document.addEventListener("DOMContentLoaded", () => {
+            const fileInput = document.querySelector("#File");
+            const img = document.querySelector("#image-preview");
+            const cameraIcon = document.querySelector("#camera-icon");
+
+            if (!fileInput || !img || !cameraIcon) return;
+
+            if (img.getAttribute("src") !== "#" && img.getAttribute("src") !== "") {
+                img.classList.remove("d-none");
+                cameraIcon.style.display = "none";
+            }
+
+            fileInput.addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        img.src = e.target.result;
+                        img.classList.remove("d-none");
+                        cameraIcon.style.display = "none";
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    img.classList.add("d-none");
+                    cameraIcon.style.display = "block";
+                }
+            });
+        });
+
     </script>
 }
 

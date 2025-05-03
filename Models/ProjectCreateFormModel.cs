@@ -2,11 +2,12 @@
 
 namespace WebApp.Models;
 
-//This code was developed with assistance from ChatGPT
+// ----------------------------------------------------
+// This code was developed with assistance from ChatGPT
+// ----------------------------------------------------
 
 public class ProjectCreateFormModel
 {
-
 
     [Display(Name = "File upload")]
     [Required(ErrorMessage = "Please select a file to upload.")]

@@ -1,4 +1,6 @@
-﻿@model WebApp.Models.ProjectCreateFormModel
+﻿<!-- Built partially with help from ChatGPT to follow correct Bootstrap 5 syntax and layout -->
+
+@model WebApp.Models.ProjectCreateFormModel
 
 <div class="image-upload-wrapper mb-4">
     <div class="image-preview-container position-relative"
@@ -20,11 +22,8 @@
 
     <div class="form-group mt-2">
         <label asp-for="File" class="form-label">Upload Image</label>
-        <input asp-for="File" accept="image/*" class="form-control" />
+        <input asp-for="File" id="File" accept="image/*" class="form-control" />
         <span asp-validation-for="File" class="text-danger"></span>
     </div>
 </div>
 
-@section Scripts {
-
-}

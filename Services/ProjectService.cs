@@ -10,10 +10,6 @@ public class ProjectService(ApplicationDbContext context)
 {
     private readonly ApplicationDbContext _context = context;
 
-    /// <summary>
-    /// Retrieves all projects from the database and maps them to ProjectCardViewModel
-    /// for displaying in a project list overview.
-    /// </summary>
     public List<ProjectCardViewModel> GetProjects()
     {
         var projects = _context.Projects.ToList();

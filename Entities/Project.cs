@@ -2,7 +2,12 @@
 
 public class Project
 {
+    // ----------------------------------------------------
+    // This code was developed with assistance from ChatGPT
+    // ----------------------------------------------------
     public string? IconPath { get; set; } = "/images/icons/A Icon.svg";
+
+
     public int Id { get; set; }
     public required string Name { get; set; }
     public string? Description { get; set; }

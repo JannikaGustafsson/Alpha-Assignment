@@ -1,25 +1,20 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.SqlServer.Server;
 using WebApp.Entities;
 using WebApp.Models;
+// ----------------------------------------------------
+// This code was developed with assistance from ChatGPT
+// ----------------------------------------------------
 
 namespace WebApp.Controllers;
 
-public class AuthController : Controller
+public class AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager) : Controller
 {
     private RegisterViewModel _registerViewModel = new();
 
-    public UserManager<ApplicationUser> UserManager { get; }
-    public SignInManager<ApplicationUser> SignInManager { get; }
-
-
-    public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
-    {
-        UserManager = userManager;
-        SignInManager = signInManager;
-    }
+    public UserManager<ApplicationUser> UserManager { get; } = userManager;
+    public SignInManager<ApplicationUser> SignInManager { get; } = signInManager;
 
     /*Login*/
     [HttpGet]
@@ -53,7 +48,6 @@ public class AuthController : Controller
         ModelState.AddModelError(string.Empty, "Invalid login attempt.");
         return View(formData);
     }
-
 
     /*Register*/
 

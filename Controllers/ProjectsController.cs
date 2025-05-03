@@ -42,7 +42,7 @@ public class ProjectsController(ProjectService projectService, ApplicationDbCont
         if (!ModelState.IsValid)
             return View(model);
 
-        // Sätt standardväg till bild
+      
         string filePath = "/Images/Icons/A Icon.svg";
 
         if (model.File != null && model.File.Length > 0)
